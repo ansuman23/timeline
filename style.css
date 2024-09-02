@@ -178,14 +178,14 @@ h3{
     animation: none;
 }
 .timeline ul li div.highlight {
-    border: 3px solid rgb(13, 174, 237); /* Highlight border */
-    box-shadow: 0 0 15px rgb(13, 174, 237); /* Add a glowing effect */
-    transition: all 0.3s ease; /* Smooth transition */
+    border: 3px solid rgb(13, 174, 237);
+    box-shadow: 0 0 15px rgb(13, 174, 237);
+    transition: all 0.3s ease;
 }
 .timeline ul li div img.highlight {
-    border: 3px solid rgb(13, 174, 237); /* Highlight border */
-    box-shadow: 0 0 15px rgb(13, 174, 237); /* Add a glowing effect */
-    transition: all 0.3s ease; /* Smooth transition */
+    border: 3px solid rgb(13, 174, 237);
+    box-shadow: 0 0 15px rgb(13, 174, 237);
+    transition: all 0.3s ease;
 }
 
 
