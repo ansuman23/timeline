@@ -18,6 +18,20 @@ function callbackFunc(){
         }
     }
 }
+document.querySelectorAll('.timeline ul li').forEach(function(item) {
+    item.addEventListener('click', function() {
+        // Remove the highlight class from all divs and imgs
+        document.querySelectorAll('.timeline ul li div').forEach(function(div) {
+            div.classList.remove('highlight');
+            div.querySelector('img').classList.remove('highlight'); // Remove from img
+        });
+
+        // Add the highlight class to the clicked item's div and img
+        const div = this.querySelector('div');
+        div.classList.add('highlight');
+        div.querySelector('img').classList.add('highlight'); // Add to img
+    });
+});
 window.addEventListener('load',callbackFunc);
 window.addEventListener('resize',callbackFunc)
 window.addEventListener('scroll',callbackFunc)

@@ -130,7 +130,25 @@ h3{
     float: right;
     text-transform: uppercase;
 }
-.timeline ul li::after{
+/* .timeline ul li::after{
+    transition: background 0.5s ease-in-out;
+} */
+.timeline ul li::after {
+    content: attr(data-year); /* Use the data-year attribute to display the year */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 40px; /* Increase the width and height for the text to fit */
+    height: 40px;
+    border-radius: 50%;
+    background-color: black; /* Ensure the background is black */
+    color: white; /* Text color should be white for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; /* Adjust font size for the text */
+    z-index: 1;
     transition: background 0.5s ease-in-out;
 }
 .timeline ul li.in-view::after{
@@ -159,11 +177,23 @@ h3{
     transform: translate3d(0, 0, 0);
     animation: none;
 }
+.timeline ul li div.highlight {
+    border: 3px solid rgb(13, 174, 237); /* Highlight border */
+    box-shadow: 0 0 15px rgb(13, 174, 237); /* Add a glowing effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+.timeline ul li div img.highlight {
+    border: 3px solid rgb(13, 174, 237); /* Highlight border */
+    box-shadow: 0 0 15px rgb(13, 174, 237); /* Add a glowing effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
 
 @media screen and (max-width: 900px){
     .timeline ul li div{
         width: 250px;
         margin-top: 80px;
+        height: 120px;
     }
     .timeline ul li:nth-child(even) div{
         left:-289px;
